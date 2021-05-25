@@ -7,6 +7,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/test", (req,res) => {
+  res.send('Hello there');
+});
+
 app.get("/*", (req, res) => {
   let pathToProxy = req.originalUrl;
   pathToProxy = pathToProxy.substring(1);
